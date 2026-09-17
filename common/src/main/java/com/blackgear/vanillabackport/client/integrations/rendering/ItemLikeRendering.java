@@ -20,6 +20,7 @@ import static com.blackgear.platform.client.GameRendering.*;
 public class ItemLikeRendering {
     public static void itemLikeRendering(ItemLikeRenderingEvent event) {
         event.simple(BundleRenderer.INSTANCE, BundleRenderer.BUNDLES);
+        event.simple(RedstoneTorchItemRenderer.INSTANCE, RedstoneTorchItemRenderer.ITEMS);
         event.dynamic(SpawnEggRenderer.INSTANCE, SpawnEggRenderer.SPAWN_EGGS);
         event.simple(SpearRenderer.INSTANCE, SpearRenderer.SPEARS);
         
