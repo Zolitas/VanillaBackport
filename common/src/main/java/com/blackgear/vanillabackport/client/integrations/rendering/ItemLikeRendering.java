@@ -1,5 +1,6 @@
 package com.blackgear.vanillabackport.client.integrations.rendering;
 
+import com.blackgear.vanillabackport.client.level.renderer.block.RedstoneTorchBlockRenderer;
 import com.blackgear.vanillabackport.client.level.renderer.block_entity.CopperChestRenderer;
 import com.blackgear.vanillabackport.client.level.renderer.block_entity.CopperGolemStatueRenderer;
 import com.blackgear.vanillabackport.client.level.renderer.block_entity.ShelfRenderer;
@@ -13,6 +14,7 @@ import net.fabricmc.api.Environment;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.DyeItem;
+import net.minecraft.world.level.block.Blocks;
 
 import static com.blackgear.platform.client.GameRendering.*;
 
@@ -39,6 +41,9 @@ public class ItemLikeRendering {
     }
     
     public static void renderTypes(BlockRendererEvent event) {
+        event.registerRenderer(RedstoneTorchBlockRenderer.INSTANCE,
+            Blocks.REDSTONE_TORCH);
+
         event.register(
             RenderType.cutoutMipped(),
             ModBlocks.PALE_OAK_LEAVES.get()
