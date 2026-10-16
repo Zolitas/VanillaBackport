@@ -5,6 +5,7 @@ import com.blackgear.vanillabackport.common.registries.blocks.ModBlocks;
 import com.blackgear.vanillabackport.common.registries.items.ModItems;
 import com.blackgear.vanillabackport.core.VanillaBackport;
 import com.blackgear.vanillabackport.core.data.tags.ModItemTags;
+import com.blackgear.vanillabackport.core.data.tags.loader.ConventionalItemTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
@@ -13,7 +14,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
 
-import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class VanillaDynamicRecipes extends DynamicRecipeProvider {
@@ -30,8 +30,8 @@ public class VanillaDynamicRecipes extends DynamicRecipeProvider {
     private static void buildBundlesOfBraveryRecipes(RecipeOutput output, Function<String, ResourceLocation> path) {
         configurableRecipe(output, path, "bundle",
             ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Items.BUNDLE)
-                .define('-', Items.STRING)
-                .define('#', Items.LEATHER)
+                .define('-', ConventionalItemTags.STRINGS)
+                .define('#', ConventionalItemTags.LEATHERS)
                 .pattern("-")
                 .pattern("#")
                 .unlockedBy("has_string", has(Items.STRING)),
@@ -61,7 +61,7 @@ public class VanillaDynamicRecipes extends DynamicRecipeProvider {
         configurableRecipe(output, path, "lodestone",
             ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, Blocks.LODESTONE)
                 .define('S', Items.CHISELED_STONE_BRICKS)
-                .define('#', Items.IRON_INGOT)
+                .define('#', ConventionalItemTags.IRON_INGOTS)
                 .pattern("SSS")
                 .pattern("S#S")
                 .pattern("SSS")
@@ -73,7 +73,7 @@ public class VanillaDynamicRecipes extends DynamicRecipeProvider {
     private static void buildChaseTheSkiesRecipes(RecipeOutput output, Function<String, ResourceLocation> path) {
         configurableRecipe(output, path, "lead",
             ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, Items.LEAD, 2)
-                .define('~', Items.STRING)
+                .define('~', ConventionalItemTags.STRINGS)
                 .pattern("~~ ")
                 .pattern("~~ ")
                 .pattern("  ~")
@@ -82,8 +82,8 @@ public class VanillaDynamicRecipes extends DynamicRecipeProvider {
         
         configurableRecipe(output, path, "saddle",
             ShapedRecipeBuilder.shaped(RecipeCategory.COMBAT, Items.SADDLE)
-                .define('X', Items.LEATHER)
-                .define('#', Items.IRON_INGOT)
+                .define('X', ConventionalItemTags.LEATHERS)
+                .define('#', ConventionalItemTags.IRON_INGOTS)
                 .pattern(" X ")
                 .pattern("X#X")
                 .unlockedBy("has_leather", has(Items.LEATHER)),

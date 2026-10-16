@@ -113,7 +113,7 @@ public class ConventionalItemTags {
     public static final TagKey<Item> INGOTS_IRON = TAGS.register("ingots/iron");
     public static final TagKey<Item> INGOTS_NETHERITE = TAGS.register("ingots/netherite");
     public static final TagKey<Item> INGOTS_NETHER_BRICK = TAGS.register("ingots/nether_brick");
-    public static final TagKey<Item> LEATHER = TAGS.register("leather");
+    public static final TagKey<Item> LEATHERS = TAGS.register("leathers");
     public static final TagKey<Item> MUSHROOMS = TAGS.register("mushrooms");
     public static final TagKey<Item> NETHER_STARS = TAGS.register("nether_stars");
     public static final TagKey<Item> NETHERRACK = TAGS.register("netherrack");
@@ -179,7 +179,7 @@ public class ConventionalItemTags {
     public static final TagKey<Item> STORAGE_BLOCKS_RAW_IRON = TAGS.register("storage_blocks/raw_iron");
     public static final TagKey<Item> STORAGE_BLOCKS_REDSTONE = TAGS.register("storage_blocks/redstone");
     public static final TagKey<Item> STORAGE_BLOCKS_RESIN = TAGS.register("storage_blocks/resin");
-    public static final TagKey<Item> STRING = TAGS.register("string");
+    public static final TagKey<Item> STRINGS = TAGS.register("strings");
     public static final TagKey<Item> TOOLS = TAGS.register("tools");
     public static final TagKey<Item> TOOLS_SHIELDS = TAGS.register("tools/shields");
     public static final TagKey<Item> TOOLS_BOWS = TAGS.register("tools/bows");
